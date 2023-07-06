@@ -1,0 +1,3 @@
+pytest-ckan
+werkzeug==2.1.2
+flask==2.1.2

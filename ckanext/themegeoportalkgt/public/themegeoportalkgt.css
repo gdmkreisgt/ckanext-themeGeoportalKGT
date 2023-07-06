@@ -1,0 +1,182 @@
+/*#########  MAIN variables and configs #########*/
+:root{
+    --darkblueKGT:#06416b;
+    --medblueKGT:#698da6;
+    --lightblueKGT:#e6ecf0 ;
+    --redKGT:#b31e3b;
+}
+.main{
+    background: var(--lightblueKGT) !important;
+}
+
+/*#########  Navbar styles and configs  #########*/
+.navbar-nav li a, .navdropdown{
+    color: #000 !important;
+    background-color: #fff !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    margin-left: 0.1rem !important;
+}
+.navbar-nav li a:hover, .navdropdown:hover{
+    color: #fff !important;
+    background: var(--darkblueKGT) !important;
+}
+.masthead {
+  background: #fff;
+}
+
+/*#########  Index site Cover styles and configs  #########*/
+.hero{
+    height: 300px !important;
+    background: linear-gradient(to top, #00000066, #00000066), url('http://geosrv9.kreis.gt-net.de/geoportal/wp-content/uploads/2023/04/CoverbildGT.jpg') !important;
+    background-size: cover !important;
+    background-position:center !important;
+}
+.cover-container{
+    max-width: 100% !important;
+    width: 100% !important;
+}
+.cover-headline{
+    color: white !important;
+    margin-top: 5rem !important;
+    margin-left: 4rem !important;
+}
+.cover-search{
+    color: white !important;
+    margin-top: 3rem !important;
+}
+.cover-search input{
+    color: white !important;
+    background: none;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-bottom: 2px solid white !important;
+}
+.cover-search input::placeholder{
+    color: white !important;
+    opacity: 1 !important;
+    font-size: larger !important;
+}
+.cover-search input:focus{
+    color: black !important;
+}
+.cover-search input:focus::placeholder{
+    color: rgb(110, 110, 110) !important;
+}
+
+/*#########  Footer styles and configs  #########*/
+.site-footer{
+    background: var(--darkblueKGT) !important;
+}
+footer>.container{
+    width: 100% !important;
+    max-width: 80% !important;
+}
+.footer-img{
+    width: 120px !important;
+}
+footer, footer p h6, .site-footer a, .attribution label{
+    color: white !important;
+}
+.attribution a{
+    color: #444 !important;
+}
+.footer-links, .attribution{
+    padding-top: 1rem !important;
+}
+
+/*#########  GUI Elements  #########*/
+.search-form{
+    background: rgba(255, 255, 255, 0) !important;
+    color: #000 !important;
+}
+.search-form .search-input button:hover i, button:hover i{
+    color: var(--redKGT) !important;
+}
+.btn-primary{
+    background-color: var(--darkblueKGT);
+    box-shadow: none !important;
+}
+.btn-primary:hover,.btn-primary:active,.btn-primary:focus{
+    background-color: var(--lightblueKGT);
+    color: var(--darkblueKGT);
+    border-color: var(--darkblueKGT);
+}
+.breadcrumb li a{
+    color: var(--redKGT) !important;
+}
+.page-header ul li a{
+    color: var(--darkblueKGT) !important;
+}
+.item-count{
+    background-color: var(--redKGT) !important;
+}
+.module-narrow .nav-aside li.active a, .module-narrow .nav-item.active a{
+    background-color: var(--medblueKGT) !important;
+}
+.module-narrow .nav-item.active a:before{
+    border-left-color: var(--medblueKGT) !important;
+}
+.filtered.pill{
+    background-color: var(--medblueKGT);
+}
+.dropdown-menu{
+    padding: 0% !important;
+}
+.dropdown-menu>li a, .dropdown-menu>li:hover a,.dropdown-menu>li{
+    margin: 0% !important;
+    border-radius: 0 !important;
+}
+.module-search, .module-search > form{
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+.module-feeds{
+    background: var(--lightblueKGT) !important;
+    height: max-content;
+}
+.module-content>.tags>.tag-list>li>a{
+    background-color: var(--lightblueKGT) !important;
+    border-color: var(--medblueKGT);
+    box-shadow: none !important;
+}
+.module-content>.tags>.tag-list>li>a:hover{
+    background-color: var(--darkblueKGT) !important;
+    border-color: var(--darkblueKGT);
+}
+
+/*#########  Tag gallery on index  #########*/
+.tag-gallery-container{
+    margin:0% !important;
+}
+.tag-gallery-main{
+    background: none !important;
+    width: fit-content !important;
+    max-width: 100% !important;
+    margin-top: -2rem !important;
+    justify-content: center !important;
+    margin-bottom: 2rem;
+}
+.tag-gallery-item{
+    width: 150px!important;
+    height: 150px !important;
+    background-color:  white !important;
+    border: var(--medblueKGT) 1px solid;
+    padding: 1rem !important;
+    text-align: center !important;
+    box-shadow: 1px 1px var(--darkblueKGT);
+    z-index: 100 !important;
+    transition: transform 0.1s;
+}
+.tag-gallery-item:hover{
+    text-decoration: none !important;
+    transform: scale(1.1);
+    z-index: 555555 !important;
+}
+.tag-gallery-icon{
+    width: 60px !important;
+    height: 60px !important;
+    margin-bottom: 15px;
+}

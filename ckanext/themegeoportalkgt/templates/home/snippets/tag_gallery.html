@@ -1,0 +1,70 @@
+{% block tag_gallery %}
+<div class="tag-gallery-main row d-flex">
+  <a class="tag-gallery-item col-12 col-md-2" href="{% url_for 'dataset.search', tags=['Planen - Bauen - Kataster'] %}">
+    <span>
+      <img src="/piktogramm_planen_ckan.png" alt="GeoJSON Logo" class="tag-gallery-icon"></br>
+      Planen, Bauen und Kataster <br />
+    </span>
+  </a>
+  <a class="tag-gallery-item col-12 col-md-2" href="{% url_for 'dataset.search', tags=['Verkehr'] %}">
+    <span>
+      <img src="/piktogramm_verkehr_ckan.png" alt="GeoJSON Logo" class="tag-gallery-icon"></br>
+      Verkehr und Mobilit&auml;t
+    </span>
+  </a>
+  <a class="tag-gallery-item col-12 col-md-2" href="{% url_for 'dataset.search', tags=['Kultur - Freizeit'] %}">
+    <span>
+      <img src="/piktogramm_kultur_ckan.png" alt="Kreis Gütersloh Logo" class="tag-gallery-icon"></br>
+      Kultur und Freizeit
+    </span>
+  </a>
+  <a class="tag-gallery-item col-12 col-md-2" href="{% url_for 'dataset.search', tags=['Lokalgeschichte'] %}">
+    <span>
+      <img src="/piktogramm_lokalgeschichte_ckan.png" alt="GeoJSON Logo" class="tag-gallery-icon"></br>
+      Lokalgeschichte
+    </span>
+  </a>
+  <a class="tag-gallery-item col-12 col-md-2" href="{% url_for 'dataset.search', tags=['Kinder - Jugend - Bildung'] %}">
+    <span>
+      <img src="/piktogramm_bildung_ckan.png" alt="GeoJSON Logo" class="tag-gallery-icon"></br>
+      Kinder, Jugend und Bildung
+    </span>
+  </a>
+  <a class="tag-gallery-item col-12 col-md-2" href="{% url_for 'dataset.search', tags=['Soziales'] %}">
+    <span>
+      <img src="/piktogramm_soziales_ckan.png" alt="GeoJSON Logo" class="tag-gallery-icon"></br>
+      Soziales
+    </span>
+  </a>
+  <a class="tag-gallery-item col-12 col-md-2" href="{% url_for 'dataset.search', tags=['Umwelt'] %}">
+    <span>
+      <img src="/piktogramm_umwelt_ckan.png" alt="GeoJSON Logo" class="tag-gallery-icon"></br>
+      Natur und Umwelt
+    </span>
+  </a>
+  <a class="tag-gallery-item col-12 col-md-2" href="{% url_for 'dataset.search', tags=['Wirtschaft'] %}">
+    <span>
+      <img src="/piktogramm_wirtschaft_ckan.png" alt="GeoJSON Logo" class="tag-gallery-icon"></br>
+      Wirtschaft und Gewerbe
+    </span>
+  </a>
+  <a class="tag-gallery-item col-12 col-md-2" href="{% url_for 'dataset.search', tags=['Wirtschaft'] %}">
+    <span>
+      <img src="/piktogramm_gesundheit_ckan.png" alt="GeoJSON Logo" class="tag-gallery-icon"></br>
+      Gesundheit
+    </span>
+  </a>
+  <a class="tag-gallery-item col-12 col-md-2" href="{% url_for 'dataset.search', tags=['Finanzen'] %}">
+    <span>
+      <img src="/piktogramm_finanzen_ckan.png" alt="GeoJSON Logo" class="tag-gallery-icon"></br>
+      Finanzen
+    </span>
+  </a>
+  <a class="tag-gallery-item col-12 col-md-2" href="{% url_for 'dataset.search', tags=['Statistik'] %}">
+    <span>
+      <img src="/piktogramm_statistik_ckan.png" alt="GeoJSON Logo" class="tag-gallery-icon"></br>
+      Statistik
+    </span>
+  </a>
+</div>
+{% endblock %}

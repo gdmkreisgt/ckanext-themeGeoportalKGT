@@ -1,0 +1,22 @@
+{% block facet_list_stat %}
+  {% set hide_empty = hide_empty or false %}
+  {% with items = items or h.get_facet_items_dict(name, search_facets) %}
+    {% if items or not hide_empty %}
+      {% block facet_list_item %}
+        {% with items = items or h.get_facet_items_dict(name, search_facets) %}
+          {% if items %}
+            {% for item in items %}
+              {% set count = count_label(item['count']) if count_label else ('%d' % item['count']) %}
+              <a href="{{ href }}" title="{{ label if label != label_truncated else '' }}">
+                <span class="item-count badge">{{ count }}</span>
+                {% if item.active %}<span class="facet-close"> <i class="fa fa-solid fa-circle-xmark"></i></span>{% endif %}
+              </a>
+            {% endfor %}
+          {% else %}
+            <p>0 Datens&auml;tze</p>
+          {% endif %}
+        {% endwith %}
+      {% endblock %}
+    {% endif %}
+  {% endwith %}
+{% endblock %}

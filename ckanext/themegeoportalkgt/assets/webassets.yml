@@ -1,0 +1,14 @@
+# themegeoportalkgt-js:
+#   filter: rjsmin
+#   output: ckanext-themegeoportalkgt/%(version)s-themegeoportalkgt.js
+#   contents:
+#     - js/themegeoportalkgt.js
+#   extra:
+#     preload:
+#       - base/main
+
+# themegeoportalkgt-css:
+#   filter: cssrewrite
+#   output: ckanext-themegeoportalkgt/%(version)s-themegeoportalkgt.css
+#   contents:
+#     - css/themegeoportalkgt.css

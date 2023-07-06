@@ -1,0 +1,141 @@
+{% set dataset_type = h.default_package_type() %}
+
+{% block header_wrapper %}
+
+  <header class="masthead">
+    <div class="container">
+      {% block header_debug %} 
+        {% if g.debug and not g.debug_supress_header %}
+          <div class="debug">Blueprint : {{ g.blueprint }}<br />View : {{ g.view }}</div>
+        {% endif %} 
+      {% endblock %}
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <hgroup class="{{ g.header_class }} navbar-left">
+        {% block header_logo %}
+          {% if g.site_logo %}
+            <a class="logo" href="{{ h.url_for('home.index') }}">
+              <img src="{{ h.url_for_static_or_external(g.site_logo) }}" alt="{{ g.site_title }}"
+                title="{{ g.site_title }}" />
+            </a>
+          {% else %}
+            <h1>
+              <a href="{{ h.url_for('home.index') }}">{{ g.site_title }}</a>
+            </h1>
+              {% if g.site_description %}
+                <h2>{{ g.site_description }}</h2>
+              {% endif %}
+          {% endif %}
+        {% endblock %}
+
+        </hgroup>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation-toggle"
+          aria-controls="main-navigation-toggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="fa fa-bars text-black"></span>
+        </button>
+
+        <div class="main-navbar collapse navbar-collapse" id="main-navigation-toggle">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            {% block header_site_navigation %}
+              {% block header_site_navigation_tabs %}
+                {% set org_type = h.default_group_type('organization') %}
+                {% set group_type = h.default_group_type('group') %}
+                <li>
+                  <a href="{{ h.url_for('search') }}" class="btn">{{ _('Datasets') }}</a>
+                </li>
+                <li>
+                  <a href="http://localhost/geoportal" class="btn">Geoportal Kreis G&uuml;tersloh</a>
+                </li>
+                <li>
+                  {% block header_account %}
+                    <div class="container">
+                      {% block header_account_container_content %} 
+                        {% if c.userobj %}
+                          <div class="btn-group">
+                              <a href="{{ h.url_for('user.read', id=c.userobj.name) }}" class="image btn dropdown-item" title="{{ _('View profile') }}">
+                                {{ h.user_image((c.user if c and c.user else ''), size=22) }}
+                                <span class="username">{{ c.userobj.display_name }}</span>
+                              </a>
+                            <button type="button" class="btn navdropdown dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                              <span class="visually-hidden">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li>
+                                {% block header_account_logged %} 
+                                  {% if c.userobj.sysadmin %}
+                                    <a href="{{ h.url_for('admin.index') }}" title="{{ _('Sysadmin settings') }}" class="dropdown-item">
+                                      <i class="fa fa-gavel" aria-hidden="true"></i>
+                                      <span class="text">{{ _('Admin') }}</span>
+                                    </a>
+                                  {% endif %}
+                              </li>
+                              <li>
+                                  {% block header_dashboard %}
+                                    <a href="{{ h.url_for('dashboard.datasets') }}" title="{{ _("View dashboard") }}" class="dropdown-item">
+                                      <i class="fa fa-tachometer" aria-hidden="true"></i>
+                                      <span class="text">{{ _('Dashboard') }}</span>
+                                    </a>
+                                  {% endblock %}
+                              </li>
+                              <li>
+                                  {% block header_account_settings_link %}
+                                    <a href="{{ h.url_for('user.edit', id=c.userobj.name) }}" title="{{ _('Profile settings') }}" class="dropdown-item">
+                                      <i class="fa fa-cog" aria-hidden="true"></i>
+                                      <span class="text">{{ _('Profile settings') }}</span>
+                                    </a>
+                                  {% endblock %} 
+                              </li>
+                              <li>
+                                  {% block header_account_log_out_link %}
+                                    <a href="{{ h.url_for('user.logout') }}" title="{{ _('Log out') }}" class="dropdown-item">
+                                      <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                      <span class="text">{{ _('Log out') }}</span>
+                                    </a>
+                                  {% endblock %}
+                                {% endblock %}
+                              </li>
+                            </ul>
+                          </div>
+                        {% else %}
+                          <div class="dropdown">
+                            <button class="btn navdropdown dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              {{ _('Log in') }} / {{ _('Register') }}
+                            </button>
+                            <ul class="dropdown-menu">
+                              {% block header_account_notlogged %}
+                                <li>
+                                  <a href="{{ h.url_for('user.login') }}" title="{{ _('Log in') }}" class="dropdown-item">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                                    <span class="text">{{ _('Log in') }}</span>
+                                  </a>
+                                </li>
+                                {% if h.check_access('user_create') %}
+                                  <li>
+                                    <a href="{{ h.url_for('user.register') }}" title="{{ _('Register') }}" class="dropdown-item">
+                                      <i class="fa fa-user-plus" aria-hidden="true"></i>
+                                      <span class="text">{{ _('Register') }}</span>
+                                    </a>
+                                  </li>
+                                {% endif %}
+                              {% endblock %}
+                            </ul>
+                          </div>
+                        {% endif %} 
+                      {% endblock %}
+                    </div>
+                  {% endblock %}
+                </li>
+              {% endblock %}
+            {% endblock %} 
+          </ul>
+          {% block header_site_search %}
+            <form class="d-flex site-search" action="{% url_for dataset_type ~ '.search' %}" method="get">
+                <label class="d-none" for="field-sitewide-search">{% block header_site_search_label %}{{ h.humanize_entity_type('package', dataset_type, 'search_placeholder') or _('Search Datasets...') }}{% endblock %}</label>
+                <input id="field-sitewide-search" class="form-control me-2"  type="text" name="q" placeholder="{{ _('Search') }}" aria-label="{{ h.humanize_entity_type('package', dataset_type, 'search_placeholder') or _('Search datasets...') }}"/>
+                <button class="btn" type="submit" aria-label="{{ _('Submit') }}"><i class="fa fa-search"></i></button>
+            </form>
+          {% endblock %}
+        </div>
+      </nav>
+    </div>
+  </header>
+{% endblock %}
