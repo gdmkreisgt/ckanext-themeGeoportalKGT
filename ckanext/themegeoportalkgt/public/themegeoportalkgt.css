@@ -4,6 +4,7 @@
     --medblueKGT:#698da6;
     --lightblueKGT:#e6ecf0 ;
     --redKGT:#b31e3b;
+    --greenKGT: #0DA262;
 }
 .main{
     background: var(--lightblueKGT) !important;
@@ -78,6 +79,9 @@ footer>.container{
 }
 footer, footer p h6, .site-footer a, .attribution label{
     color: white !important;
+}
+.site-footer a{
+    font-weight: bold;
 }
 .attribution a{
     color: #444 !important;
@@ -180,3 +184,28 @@ footer, footer p h6, .site-footer a, .attribution label{
     height: 60px !important;
     margin-bottom: 15px;
 }
+
+/* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: var(--greenKGT); /* Green */
+    color: white;
+    margin-bottom: 15px;
+  }
+  
+  /* The close button */
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* When moving the mouse over the close button */
+  .closebtn:hover {
+    color: black;
+  }
