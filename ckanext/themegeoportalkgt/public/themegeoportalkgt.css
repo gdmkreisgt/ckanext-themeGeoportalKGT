@@ -192,7 +192,14 @@ footer, footer p h6, .site-footer a, .attribution label{
     color: white;
     margin-bottom: 15px;
   }
-  
+  .alert a{
+    text-decoration: none !important;
+    color: white !important;
+    font-weight: bold; 
+  }
+.alert a:hover{
+    text-decoration: underline !important;
+}
   /* The close button */
   .closebtn {
     margin-left: 15px;
