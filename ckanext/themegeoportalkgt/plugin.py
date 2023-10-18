@@ -49,7 +49,7 @@ class ThemegeoportalkgtPlugin(plugins.SingletonPlugin):
     '''An example theme plugin.
 
     '''
-    plugins.implements(plugins.IRoutes)
+    plugins.implements(plugins.interfaces.IRoutes)
     plugins.implements(plugins.ITemplateHelpers)
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IConfigDeclaration)
