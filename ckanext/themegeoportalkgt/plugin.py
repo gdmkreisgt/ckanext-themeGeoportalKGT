@@ -10,6 +10,7 @@ import ckan.plugins.interfaces as interfaces
 import ckan.lib.base as base
 from ckan.common import CKANConfig, config
 from ckan.config.declaration import Declaration, Key
+from ckan.plugins import IRoutes
 
 
 def show_most_popular_groups():
@@ -50,7 +51,7 @@ class ThemegeoportalkgtPlugin(plugins.SingletonPlugin):
     '''An example theme plugin.
 
     '''
-    plugins.implements(interfaces.IRoutes)
+    plugins.implements(IRoutes, inherit = True)
     plugins.implements(plugins.ITemplateHelpers)
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IConfigDeclaration)
