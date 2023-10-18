@@ -132,6 +132,9 @@ footer, footer p h6, .site-footer a, .attribution label{
     margin: 0% !important;
     border-radius: 0 !important;
 }
+.dropdown-menu>li a{
+    display: block !important;
+}
 .module-search, .module-search > form{
     background: none !important;
     border: none !important;
