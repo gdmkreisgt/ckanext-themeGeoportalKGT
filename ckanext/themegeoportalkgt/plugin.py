@@ -6,6 +6,7 @@ from typing import Any, Callable
 import routes.mapper
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
+import ckan.plugins.interfaces as interfaces
 import ckan.lib.base as base
 from ckan.common import CKANConfig, config
 from ckan.config.declaration import Declaration, Key
@@ -49,7 +50,7 @@ class ThemegeoportalkgtPlugin(plugins.SingletonPlugin):
     '''An example theme plugin.
 
     '''
-    plugins.implements(plugins.interfaces.IRoutes)
+    plugins.implements(interfaces.IRoutes)
     plugins.implements(plugins.ITemplateHelpers)
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IConfigDeclaration)
