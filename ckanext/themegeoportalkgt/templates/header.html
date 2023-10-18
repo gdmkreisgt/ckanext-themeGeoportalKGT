@@ -139,18 +139,11 @@
     </div>
   </header>
   <script>
-    if(!document.getElementById("admin-btn")){
       var pages = document.querySelector('[title="Pages"]');
       var blog = document.querySelector('[title="Blog"]');
-      pages.addClass("hideNav");
-      blog.addClass("hideNav");
-    }else{
-      var pages = document.querySelector('[title="Pages"]');
-      var blog = document.querySelector('[title="Blog"]');
-      var pagesText = document.createTextNode("Seite erstellen");
-      var blogText = document.createTextNode("Blog erstellen");
+      var pagesText = document.createTextNode("Seiten");
+      var blogText = document.createTextNode("Blogs");
       pages.appendChild(pagesText);
       blog.appendChild(blogText);
-    }
   </script>
 {% endblock %}
