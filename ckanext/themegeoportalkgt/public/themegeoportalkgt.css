@@ -25,7 +25,9 @@
 .masthead {
   background: #fff;
 }
-
+.hideNav{
+    display: none !important;
+}
 /*#########  Index site Cover styles and configs  #########*/
 .hero{
     height: 300px !important;

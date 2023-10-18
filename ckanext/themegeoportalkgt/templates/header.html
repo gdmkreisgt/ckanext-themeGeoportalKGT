@@ -62,7 +62,7 @@
                               {% block header_account_logged %}
                               <li>
                                   {% if c.userobj.sysadmin %}
-                                    <a href="{{ h.url_for('admin.index') }}" title="{{ _('Sysadmin settings') }}" class="dropdown-item">
+                                    <a href="{{ h.url_for('admin.index') }}" title="{{ _('Sysadmin settings') }}" class="dropdown-item" id="admin-btn">
                                       <i class="fa fa-gavel" aria-hidden="true"></i>
                                       <span class="text">{{ _('Admin') }}</span>
                                     </a>
@@ -138,4 +138,19 @@
       </nav>
     </div>
   </header>
+  <script>
+    if(!document.getElementById("admin-btn")){
+      var pages = document.querySelector('[title="Pages"]');
+      var blog = document.querySelector('[title="Blog"]');
+      pages.addClass("hideNav");
+      blog.addClass("hideNav");
+    }else{
+      var pages = document.querySelector('[title="Pages"]');
+      var blog = document.querySelector('[title="Blog"]');
+      var pagesText = document.createTextNode("Seite erstellen");
+      var blogText = document.createTextNode("Blog erstellen");
+      pages.appendChild(pagesText);
+      blog.appendChild(blogText);
+    }
+  </script>
 {% endblock %}
