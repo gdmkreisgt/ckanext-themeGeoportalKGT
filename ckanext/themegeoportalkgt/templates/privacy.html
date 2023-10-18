@@ -1,5 +1,7 @@
 {% extends "page.html" %}
-
+{% block breadcrumb_content %}
+  <li class="active">{% link_for _('Privacy'), controller='ckanext.themegeoportalkgt.plugin:NPController', action='privacy' %}</li>
+{% endblock %}
 {% block primary %}
   <article class="module">
     <div class="module-content">

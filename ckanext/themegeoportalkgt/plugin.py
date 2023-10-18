@@ -2,8 +2,11 @@
 from __future__ import annotations
 
 from typing import Any, Callable
+
+import routes.mapper
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
+import ckan.lib.base as base
 from ckan.common import CKANConfig, config
 from ckan.config.declaration import Declaration, Key
 
@@ -46,9 +49,13 @@ class ThemegeoportalkgtPlugin(plugins.SingletonPlugin):
     '''An example theme plugin.
 
     '''
+    plugins.implements(plugins.IRoutes)
+    plugins.implements(plugins.ITemplateHelpers)
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.IConfigDeclaration)
+    plugins.implements(plugins.IConfigurable, inherit=True)
     plugins.implements(plugins.IAuthFunctions, inherit=True)
+    plugins.implements(plugins.IPackageController, inherit=True)
 
     # Declare that this plugin will implement ITemplateHelpers.
     plugins.implements(plugins.ITemplateHelpers)
@@ -83,3 +90,22 @@ class ThemegeoportalkgtPlugin(plugins.SingletonPlugin):
         return {
             'user_create': no_registering
         }
+    
+    def before_map(self, route_map):
+        with routes.mapper.SubMapper(route_map,
+                controller='ckanext.sa.plugin:SAController') as m:
+            m.connect('privacy', '/privacy',
+                    action='privacy')
+            m.connect('simple_language', '/simple_language', action='simple_language')
+        return route_map
+
+    def after_map(self, route_map):
+        return route_map
+
+class NPController(base.BaseController):
+
+    def privacy(self):
+        return base.render('privacy.html')
+
+    def simple_language(self):
+        return base.render('simple_language.html')

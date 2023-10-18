@@ -1,5 +1,7 @@
 {% extends "page.html" %}
-
+{% block breadcrumb_content %}
+  <li class="active">{% link_for _('Simple_Language'), controller='ckanext.themegeoportalkgt.plugin:NPController', action='simple_language' %}</li>
+{% endblock %}
 {% block primary %}
   <article class="module">
     <div class="module-content">
