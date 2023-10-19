@@ -3,6 +3,7 @@ function setCookie(cname, cvalue, exdays) {
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     let expires = "expires="+d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    let banner = document.getElementById("cookie-banner-main");
     banner.classList.remove("cookie-banner-bg-not-set");;
 }
 function getCookie(cname) {
