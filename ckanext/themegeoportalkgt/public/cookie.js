@@ -24,6 +24,7 @@ function getCookie(cname) {
 }
 
 function checkCookie(cname) {
+    console.log("test")
     let cookie = getCookie(cname);
     let banner = document.getElementById("cookie-banner-main");
     if (cookie != "") {
