@@ -1,14 +1,10 @@
-checkCookie("ODKGTCookie");
-
 function setCookie(cname, cvalue, exdays) {
-    console.log(cname,cvalue,exdays)
     const d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     let expires = "expires="+d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
     checkCookie(cname);
 }
-
 function getCookie(cname) {
     let name = cname + "=";
     let ca = document.cookie.split(';');
@@ -23,13 +19,10 @@ function getCookie(cname) {
     }
     return "";
 }
-
 function checkCookie(cname) {
-    console.log("test")
     let cookie = getCookie(cname);
     let banner = document.getElementById("cookie-banner-main");
-    if (cookie != "") {
-        console.log("test2")
-        banner.style.display = "none";
+    if (cookie === "") {
+        banner.style.display = "block";
     }
 }

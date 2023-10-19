@@ -221,6 +221,7 @@ footer, footer p h6, .site-footer a, .attribution label{
 
 /* CSS for Cookie Banner */
 .cookie-banner-bg{
+    display: none;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.308);
