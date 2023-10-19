@@ -6,6 +6,7 @@ function setCookie(cname, cvalue, exdays) {
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     let expires = "expires="+d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    checkCookie(cname);
 }
 
 function getCookie(cname) {
@@ -28,6 +29,7 @@ function checkCookie(cname) {
     let cookie = getCookie(cname);
     let banner = document.getElementById("cookie-banner-main");
     if (cookie != "") {
+        console.log("test2")
         banner.style.display = "none";
     }
 }
