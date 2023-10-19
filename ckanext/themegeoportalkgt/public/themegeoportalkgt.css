@@ -152,7 +152,7 @@ footer, footer p h6, .site-footer a, .attribution label{
     background-color: var(--darkblueKGT) !important;
     border-color: var(--darkblueKGT);
 }
-.context-info{
+.context-info .image img, .context-info .image a{
     height: auto !important;
 }
 /*#########  Tag gallery on index  #########*/
