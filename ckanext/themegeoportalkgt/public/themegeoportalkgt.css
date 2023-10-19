@@ -152,7 +152,9 @@ footer, footer p h6, .site-footer a, .attribution label{
     background-color: var(--darkblueKGT) !important;
     border-color: var(--darkblueKGT);
 }
-
+.context-info{
+    height: auto !important;
+}
 /*#########  Tag gallery on index  #########*/
 .tag-gallery-container{
     margin:0% !important;
@@ -227,6 +229,9 @@ footer, footer p h6, .site-footer a, .attribution label{
     background-color: rgba(0, 0, 0, 0.308);
     z-index: 999998;
     position: fixed;
+}
+.cookie-banner-bg-not-set{
+    display: block !important;
 }
 .cookie-consent-banner {
     position: fixed;
