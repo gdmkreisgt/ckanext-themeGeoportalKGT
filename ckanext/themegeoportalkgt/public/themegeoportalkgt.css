@@ -25,13 +25,10 @@
 .masthead {
   background: #fff;
 }
-.hideNav{
-    display: none !important;
-}
 /*#########  Index site Cover styles and configs  #########*/
 .hero{
     height: 300px !important;
-    background: linear-gradient(to top, #00000066, #00000066), url('http://geosrv9.kreis.gt-net.de/geoportal/wp-content/uploads/2023/04/CoverbildGT.jpg') !important;
+    background: linear-gradient(to top, #00000066, #00000066), url('https://geoportal.kreis-guetersloh.de/downloads/images/CoverbildGT.jpg') !important;
     background-size: cover !important;
     background-position:center !important;
 }
@@ -220,4 +217,93 @@ footer, footer p h6, .site-footer a, .attribution label{
   /* When moving the mouse over the close button */
   .closebtn:hover {
     color: black;
+  }
+
+/* CSS for Cookie Banner */
+.cookie-consent-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2147483645;
+    box-sizing: border-box;
+    width: 100%;
+  
+    background-color: #F1F6F4;
+  }
+  
+  .cookie-consent-banner__inner {     
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 32px 0;
+  }
+  
+  .cookie-consent-banner__copy { 
+    margin-bottom: 16px;
+  }
+  
+  .cookie-consent-banner__actions { 
+    position: relative;
+    left: 45% !important;   
+  }
+  
+  .cookie-consent-banner__header {
+    margin-bottom: 8px;
+    
+    font-family: "CeraPRO-Bold", sans-serif, arial;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .cookie-consent-banner__description {
+    font-family: "CeraPRO-Regular", sans-serif, arial;
+    font-weight: normal;
+    color: #838F93;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .cookie-consent-banner__cta {
+    box-sizing: border-box;
+    display: inline-block;
+    min-width: 164px;
+    padding: 11px 13px;
+      
+    border-radius: 2px;
+    
+    background-color: #2CE080;
+     
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    font-family: "CeraPRO-Regular", sans-serif, arial;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  
+  .cookie-consent-banner__cta--secondary { 
+    padding: 9px 13px;
+    
+    border: 2px solid #3A4649;
+    
+    background-color: transparent;
+    
+    color: #2CE080;
+  }
+  
+  .cookie-consent-banner__cta:hover {
+    background-color: #20BA68;
+  }
+  
+  .cookie-consent-banner__cta--secondary:hover {
+    border-color: #838F93;
+      
+    background-color: transparent;
+    
+    color: #22C870;
+  }
+  
+  .cookie-consent-banner__cta:last-child {
+    margin-left: 16px;
   }
