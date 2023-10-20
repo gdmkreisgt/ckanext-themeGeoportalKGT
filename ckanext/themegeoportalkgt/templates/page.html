@@ -1,7 +1,7 @@
 {% extends "base.html" %}
-{% include "cookie.html" %}
 {%- block page -%}
 
+  {% include "cookie.html" %}
   {% block skip %}
     <div class="visually-hidden-focusable"><a href="#content">{{ _('Skip to main content') }}</a></div>
   {% endblock %}
