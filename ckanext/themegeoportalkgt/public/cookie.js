@@ -24,13 +24,13 @@ function checkCookie(cname) {
     let cookie = getCookie(cname);
     if (cookie === "") {
         createCookieBanner();
-        banner.classList.add("cookie-banner-bg-not-set")
     }
 }
 function createCookieBanner(){
     let main = document.getElementById("cookie-banner-main");
     let banner = document.createElement("DIV");
     banner.classList.add("cookie-consent-banner");
+    banner.classList.add("cookie-banner-bg-not-set")
     let inner = document.createElement("DIV");
     inner.classList.add("cookie-consent-banner__inner");
     let copy = document.createElement("DIV");
@@ -47,7 +47,7 @@ function createCookieBanner(){
     actions.classList.add("cookie-consent-banner__actions");
     let btn = document.createElement("BUTTON");
     btn.classList.add("cookie-consent-banner__cta");
-    btn.onclick = setCookie('ODKGTCookie',true,30);
+    btn.addEventListener('onclick', setCookie('ODKGTCookie',true,30));
     btn.textContent = "OK";
     actions.appendChild(btn);
     copy.appendChild(header);
@@ -55,5 +55,5 @@ function createCookieBanner(){
     inner.appendChild(copy);
     inner.appendChild(actions);
     banner.appendChild(inner);
-    main.appendChild(main)
+    main.appendChild(banner)
 }
