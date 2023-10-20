@@ -28,9 +28,9 @@ function checkCookie(cname) {
 }
 function createCookieBanner(){
     let main = document.getElementById("cookie-banner-main");
+    main.classList.add("cookie-banner-bg-not-set")
     let banner = document.createElement("DIV");
     banner.classList.add("cookie-consent-banner");
-    banner.classList.add("cookie-banner-bg-not-set")
     let inner = document.createElement("DIV");
     inner.classList.add("cookie-consent-banner__inner");
     let copy = document.createElement("DIV");
@@ -41,13 +41,13 @@ function createCookieBanner(){
     header.appendChild(headerContent)
     let description = document.createElement("DIV");
     description.classList.add("cookie-consent-banner__description");
-    let descriptionContent = document.createTextNode("Wir verwenden Cookies, um eine reibungslose Funktionalität der Website garantieren zu können.</br>Es werden <strong>keine</strong> Daten zu Marketing- oder Analysezwecken gesammelt und gespeichert.");
+    let descriptionContent = document.createTextNode("Wir verwenden Cookies, um eine reibungslose Funktionalität der Website garantieren zu können. Es werden keine Daten zu Marketing- oder Analysezwecken gesammelt und gespeichert.");
     description.appendChild(descriptionContent)
     let actions = document.createElement("DIV");
     actions.classList.add("cookie-consent-banner__actions");
     let btn = document.createElement("BUTTON");
     btn.classList.add("cookie-consent-banner__cta");
-    btn.setAttribute('onclick', 'setCookie("ODKGTCookie",true,30)');
+    btn.setAttribute("onclick", "setCookie('ODKGTCookie',true,30)");
     btn.textContent = "OK";
     actions.appendChild(btn);
     copy.appendChild(header);
