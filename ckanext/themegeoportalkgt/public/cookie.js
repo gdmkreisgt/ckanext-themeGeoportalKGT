@@ -47,7 +47,7 @@ function createCookieBanner(){
     actions.classList.add("cookie-consent-banner__actions");
     let btn = document.createElement("BUTTON");
     btn.classList.add("cookie-consent-banner__cta");
-    btn.addEventListener('onclick', setCookie('ODKGTCookie',true,30));
+    btn.setAttribute('onclick', 'setCookie("ODKGTCookie",true,30)');
     btn.textContent = "OK";
     actions.appendChild(btn);
     copy.appendChild(header);
