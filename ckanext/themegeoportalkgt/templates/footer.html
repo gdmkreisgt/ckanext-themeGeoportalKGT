@@ -1,60 +1,81 @@
 
 <footer class="site-footer">
     <div class="container">
-      {% block footer_content %}
-      <div class="row">
-        <div class="col-md-3 col-12">
-            <a href="https://www.kreis-guetersloh.de"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/DEU_Kreis_G%C3%BCtersloh_COA.svg/1200px-DEU_Kreis_G%C3%BCtersloh_COA.svg.png" class="footer-img" alt="Wappen des Kreis Guetersloh mit Link zur Kreis-Website"></a>
-        </div>
-        <div class="col-md-3 col-12 footer-links">
-          {% block footer_nav %}
-            <h4>Links</h4>
-            <ul class="list-unstyled">
-                {% block footer_links %}
-                    <li><a href="{{ h.url_for('home.about') }}">Über das Open-Data Portal</a></li>
-                {% endblock %}
-                <li>
-                    <a href="http://geosrv9.kreis.gt-net.de/geoportal/impressum/">Impressum</a>
-                </li>
-                <li>
-                    <a href="https://opendata.kreis-guetersloh.de/pages/privacy">Datenschutzerkl&auml;rung</a>
-                </li>
-                <li>
-                    <a href="https://www.kreis-guetersloh.de/unser-kreis/verwaltung/dsgvo/">DSGVO</a>
-                </li>
-                <li>
-                    <a href="http://geosrv9.kreis.gt-net.de/downloads/hinweise/Barrierefreiheit_Erklaerung.pdf">Barrierefreiheit</a>
-                </li>
-                <li>
-                    <a href="https://opendata.kreis-guetersloh.de/pages/easyread">Leichte Sprache</a>
-                </li>
-            </ul>
-          {% endblock %}
-        </div>
-        <div class="col-md-3 col-12 footer-links">
-            <h4>Kontakt</h4>
-            {% block footer_contact %}
+        {% block footer_content %}
+        <div class="row">
+            <div class="col-md-3 col-12 footer-img-div">
+                <a href="https://www.kreis-guetersloh.de"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/DEU_Kreis_G%C3%BCtersloh_COA.svg/1200px-DEU_Kreis_G%C3%BCtersloh_COA.svg.png" class="footer-img" alt="Wappen des Kreis Guetersloh mit Link zur Kreis-Website"></a>
+            </div>
+            <div class="col-md-3 col-12 footer-links">
+                <h3>Kontakt</h3>
+                {% block footer_contact %}
                 <ul class="list-unstyled">
                     <li>
-                        <p>Kreis G&uuml;tersloh, Herzebrocker Straße 140</br>
-                        33334 G&uuml;tersloh</br>
-                        Tel: 05241 85-0</p>
+                        Kreis G&uuml;tersloh
                     </li>
                     <li>
-                        <p>Abteilung 4.1 Geoinformation, Kataster und Vermessung</br>
-                        Sachgebiet Geodatenservice</br>
-                        Mail: <a href="mailto:support.gis@kreis-guetersloh.de">support.gis@kreis-guetersloh.de</a></p>
+                        Herzebrocker Straße 140
+                    </li>
+                    <li>
+                        33334 G&uuml;tersloh
+                    </li>
+                    <li>
+                        Tel: 05241 85-0
+                    </li>
+                </ul>
+                {% endblock %}
+            </div>
+            <div class="col-md-3 col-12 footer-links">
+                <h3>Kontakt</h3>
+                {% block footer_contact %}
+                <ul class="list-unstyled">
+                    <li>
+                        Abteilung 4.1 Geoinformation, </br>Kataster und Vermessung
+                    </li>
+                    <li>
+                        Sachgebiet Geodatenservice
+                    </li>
+                    <li>
+                        Mail: <a href="mailto:support.gis@kreis-guetersloh.de">support.gis@kreis-</br>guetersloh.de</a>
                     </li>
                     <li>
                         <a href="http://geosrv9.kreis.gt-net.de/geoportal/kontakt-2/">Kontaktformular</a>
                     </li>
-              </ul>
-            {% endblock %}
-          </div>
-        <div class="col-md-3 col-12 attribution">
-            <h4>Powered by</h4> <p><a class="hide-text ckan-footer-logo" href="http://ckan.org">CKAN</a></p>
+                </ul>
+                {% endblock %}
+            </div>
+            <div class="col-md-3 col-12 footer-links">
+                {% block footer_nav %}
+                <h3>Links</h3>
+                <ul class="list-unstyled">
+                    {% block footer_links %}
+                        <li><a href="{{ h.url_for('home.about') }}">Über das Open-Data Portal</a></li>
+                    {% endblock %}
+                    <li>
+                        <a href="http://geosrv9.kreis.gt-net.de/geoportal/impressum/">Impressum</a>
+                    </li>
+                    <li>
+                        <a href="https://opendata.kreis-guetersloh.de/pages/privacy">Datenschutzerkl&auml;rung</a>
+                    </li>
+                    <li>
+                        <a href="https://www.kreis-guetersloh.de/unser-kreis/verwaltung/dsgvo/">DSGVO</a>
+                    </li>
+                    <li>
+                        <a href="http://geosrv9.kreis.gt-net.de/geoportal/barrierefreiheit/">Barrierefreiheit</a>
+                    </li>
+                    <li>
+                        <a href="https://opendata.kreis-guetersloh.de/pages/easyread">Leichte Sprache</a>
+                    </li>
+                    <li>
+                        <a href="http://geosrv9.kreis.gt-net.de/geoportal/gebaerdensprache/">Gebärdensprache</a>
+                    </li>
+                </ul>
+                {% endblock %}
+            </div>
         </div>
-      </div>
-      {% endblock %}
+        {% endblock %}
+    </div>
+    <div class="col-md-3 col-12 attribution">
+        <p>Copyright © 2023 <a href="https://www.kreis-guetersloh.de/">Kreis Gütersloh</a> | Powered by <a class="hide-text ckan-footer-logo" href="http://ckan.org">CKAN</a></p>
     </div>
   </footer>

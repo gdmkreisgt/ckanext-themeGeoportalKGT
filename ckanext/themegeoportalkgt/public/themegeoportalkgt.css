@@ -79,19 +79,31 @@ footer>.container{
 .footer-img{
     width: 120px !important;
 }
+.footer-img-div{
+    padding-top: 1rem;
+}
 footer, footer p h6, .site-footer a, .attribution label{
     color: white !important;
 }
 .site-footer a{
     font-weight: bold;
 }
-.attribution a{
-    color: #444 !important;
-}
-.footer-links, .attribution{
+.footer-links{
     padding-top: 1rem !important;
+    font-size: medium;
 }
-
+.attribution{
+    width: 100%;
+    border-top: 1px solid var(--lightblueKGT);
+    margin-top: 0.5rem;
+    text-align: center;
+}
+.attributionp, .attribution p a{
+    color: white !important;
+}
+.ckan-footer-logo{
+    display: inline-block !important;
+}
 /*#########  GUI Elements  #########*/
 .search-form{
     background: rgba(255, 255, 255, 0) !important;
