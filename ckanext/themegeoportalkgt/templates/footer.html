@@ -8,7 +8,6 @@
             </div>
             <div class="col-md-3 col-12 footer-links">
                 <h3>Kontakt</h3>
-                {% block footer_contact %}
                 <ul class="list-unstyled">
                     <li>
                         Kreis G&uuml;tersloh
@@ -23,11 +22,9 @@
                         Tel: 05241 85-0
                     </li>
                 </ul>
-                {% endblock %}
             </div>
             <div class="col-md-3 col-12 footer-links">
-                <h3>Kontakt</h3>
-                {% block footer_contact %}
+                <h3>Fachabteilung</h3>
                 <ul class="list-unstyled">
                     <li>
                         Abteilung 4.1 Geoinformation, </br>Kataster und Vermessung
@@ -42,15 +39,12 @@
                         <a href="http://geosrv9.kreis.gt-net.de/geoportal/kontakt-2/">Kontaktformular</a>
                     </li>
                 </ul>
-                {% endblock %}
             </div>
             <div class="col-md-3 col-12 footer-links">
-                {% block footer_nav %}
                 <h3>Links</h3>
                 <ul class="list-unstyled">
-                    {% block footer_links %}
-                        <li><a href="{{ h.url_for('home.about') }}">Über das Open-Data Portal</a></li>
-                    {% endblock %}
+                    <li>
+                        <a href="{{ h.url_for('home.about') }}">Über das Open-Data Portal</a></li>
                     <li>
                         <a href="http://geosrv9.kreis.gt-net.de/geoportal/impressum/">Impressum</a>
                     </li>
@@ -70,7 +64,6 @@
                         <a href="http://geosrv9.kreis.gt-net.de/geoportal/gebaerdensprache/">Gebärdensprache</a>
                     </li>
                 </ul>
-                {% endblock %}
             </div>
         </div>
         {% endblock %}
