@@ -79,7 +79,7 @@ footer>.container{
 .footer-img{
     width: 120px !important;
 }
-.footer-img-div{
+.footer-img-div, .attribution{
     padding-top: 1rem;
 }
 footer, footer p h6, .site-footer a, .attribution label{
