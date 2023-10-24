@@ -62,7 +62,8 @@ class ThemegeoportalkgtPlugin(plugins.SingletonPlugin):
         # that CKAN will use this plugin's custom templates.
         toolkit.add_template_directory(config, 'templates')
         toolkit.add_public_directory(config, 'public')
-        config['licenses_group_url'] = 'https://geoportal.kreis-guetersloh.de/opendata/json-list-of-licenses.json'
+        licensefile = config.get('custom_license_file')
+        config['licenses_group_url'] = licensefile
 
     def get_helpers(self) -> dict[str, Callable[..., Any]]:
         '''Register the most_popular_groups() function above as a template
