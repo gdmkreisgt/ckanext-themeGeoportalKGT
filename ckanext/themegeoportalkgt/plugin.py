@@ -66,6 +66,7 @@ class ThemegeoportalkgtPlugin(plugins.SingletonPlugin):
         possible_licences_path = os.path.join(here,
                                               'resources',
                                               'json-list-of-licenses.json')
+        print (possible_licences_path)
         if os.path.isfile(possible_licences_path):
             ckan_config['licenses_group_url'] = 'file://' \
                 + possible_licences_path
