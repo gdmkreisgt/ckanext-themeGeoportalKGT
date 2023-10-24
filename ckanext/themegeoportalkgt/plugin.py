@@ -57,17 +57,17 @@ class ThemegeoportalkgtPlugin(plugins.SingletonPlugin):
     # Declare that this plugin will implement ITemplateHelpers.
     plugins.implements(plugins.ITemplateHelpers)
 
-    def update_config(self, config: CKANConfig):
+    def update_config(self, ckan_config):
         here = os.path.dirname(__file__)
         # Add this plugin's templates dir to CKAN's extra_template_paths, so
         # that CKAN will use this plugin's custom templates.
-        toolkit.add_template_directory(config, 'templates')
-        toolkit.add_public_directory(config, 'public')
+        toolkit.add_template_directory(ckan_config, 'templates')
+        toolkit.add_public_directory(ckan_config, 'public')
         possible_licences_path = os.path.join(here,
                                               'resources',
                                               'json-list-of-licenses.json')
         if os.path.isfile(possible_licences_path):
-            config['licenses_group_url'] = 'file://' \
+            ckan_config['licenses_group_url'] = 'file://' \
                 + possible_licences_path
 
 
