@@ -5,6 +5,7 @@ from typing import Any, Callable
 
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
+import os
 import ckan.lib.base as base
 from ckan.common import CKANConfig, config
 from ckan.config.declaration import Declaration, Key
@@ -57,13 +58,18 @@ class ThemegeoportalkgtPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.ITemplateHelpers)
 
     def update_config(self, config: CKANConfig):
-
+        here = os.path.dirname(__file__)
         # Add this plugin's templates dir to CKAN's extra_template_paths, so
         # that CKAN will use this plugin's custom templates.
         toolkit.add_template_directory(config, 'templates')
         toolkit.add_public_directory(config, 'public')
-        licensefile = config.get('custom_license_file')
-        config['licenses_group_url'] = licensefile
+        possible_licences_path = os.path.join(here,
+                                              'resources',
+                                              'json-list-of-licenses.json')
+        if os.path.isfile(possible_licences_path):
+            config['licenses_group_url'] = 'file://' \
+                + possible_licences_path
+
 
     def get_helpers(self) -> dict[str, Callable[..., Any]]:
         '''Register the most_popular_groups() function above as a template
