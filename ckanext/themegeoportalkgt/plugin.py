@@ -68,7 +68,6 @@ class ThemegeoportalkgtPlugin(plugins.SingletonPlugin):
                                               'json-list-of-licenses.json')
         ckan_config['licenses_group_url'] = 'file://' \
                 + possible_licences_path
-        ckan_config['beaker.session.timeout'] = 3600
 
     def get_helpers(self) -> dict[str, Callable[..., Any]]:
         '''Register the most_popular_groups() function above as a template
