@@ -1,0 +1,37 @@
+  
+  /* CSS for Layer Stack Button in ressource views*/
+  .stacked-layers{
+    background-color: var(--darkblueKGT);
+  }
+  .layer-1{
+    background-image: url(./layerstack.png);
+  }
+  @keyframes stack-the-layers {
+    0%{
+        transform:rotate(0deg)
+    }
+    100%{
+        transform:rotate(360deg)
+    }	
+  }
+
+
+  
+.ol-control {
+    background-color: rgba(148,148,148,0.4) !important;
+}
+.ol-control button{
+    background-color: var(--darkblueKGT) !important;
+}
+.panel{
+    background-color: white !important;
+}
+.panel label{
+    color: var(--darkblueKGT) !important;
+}
+.layer-switcher .header{
+    background-color: var(--darkblueKGT) !important;
+}
+.base-layer-select select{
+    background-color: var(--darkblueKGT) !important;
+}
