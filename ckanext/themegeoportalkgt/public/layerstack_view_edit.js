@@ -1,4 +1,4 @@
-let iframe = document.querySelector('[title="Data Viewer"]');
+let iframe = document.querySelector('[title="Data viewer"]');
 let innerDoc = iframe.contentDocument || iframe.contentWindow.document;
 
 let cssLink = innerDoc.createElement("link");
