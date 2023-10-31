@@ -5,7 +5,7 @@ let cssLink = innerDoc.createElement("link");
 cssLink.href = "/layerstack.css"; 
 cssLink.rel = "stylesheet"; 
 cssLink.type = "text/css"; 
-iframe.innerDoc.head.appendChild(cssLink);
+iframe.document.head.appendChild(cssLink);
 
 let stacked_layers = innerDoc.getElementsByClassName("stacked-layers");
 stacked_layers.textContent = "";
