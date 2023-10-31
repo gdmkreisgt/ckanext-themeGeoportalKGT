@@ -17,13 +17,18 @@
     -webkit-transform-origin: unset !important;
     background-image: url(layerstack.png);
     width: 26px !important;
-    height: 26px !important;
+    height: 25px !important;
   }
   .layer-1.animated {
     animation-delay:unset !important;
-    background-image: url(spinner.png);;
+    background-image: url(spinner.png);
+    animation: none !important;
+    animation: spinner 1.5s infinite linear !important;
   }
-  @keyframes stack-the-layers {
+  .layer-2, .layer-3{
+    display: none;
+  }
+  @keyframes spinner {
     0%{
         transform:rotate(0deg)
     }
@@ -49,6 +54,6 @@
 .layer-switcher .header{
     background-color: var(--darkblueKGT) !important;
 }
-.base-layer-select select{
+.baseLayerSelector select{
     background-color: var(--darkblueKGT) !important;
 }
