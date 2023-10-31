@@ -9,9 +9,12 @@
   .stacked-layers{
     background-color: var(--darkblueKGT);
   }
+
+  .layer-1:not(.animated){
+    transform: none !important;
+  }
   .layer-1{
     background-color: unset !important;
-    transform: none !important;
     border: none !important;
     transform-origin:unset !important;
     -webkit-transform-origin: unset !important;
@@ -22,24 +25,24 @@
     left: 4px !important;
     box-shadow: none !important;
   }
-  .stacked-layer.animated {
+  .animated {
     animation-delay:unset !important;
     background-image: url(spinner.png);
     animation: none !important;
     animation: spinner 1.5s infinite linear !important;
   }
+  
   .layer-2, .layer-3{
     display: none;
   }
   @keyframes spinner {
     0%{
-        transform:rotate(0deg)
+      transform:rotate(0deg)
     }
     100%{
         transform:rotate(360deg)
     }	
   }
-
 
   
 .ol-control {
