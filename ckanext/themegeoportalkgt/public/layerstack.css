@@ -10,11 +10,14 @@
     background-color: var(--darkblueKGT);
   }
   .layer-1{
+    background-color: unset !important;
     transform: none !important;
     border: none !important;
     transform-origin:unset !important;
     -webkit-transform-origin: unset !important;
     background-image: url(layerstack.png);
+    width: 26px !important;
+    height: 26px !important;
   }
   .layer-1.animated {
     animation-delay:unset !important;
