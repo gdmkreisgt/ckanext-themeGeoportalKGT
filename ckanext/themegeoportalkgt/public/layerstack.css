@@ -18,8 +18,11 @@
     background-image: url(layerstack.png);
     width: 26px !important;
     height: 25px !important;
+    top: 5px !important;
+    left: 4px !important;
+    box-shadow: none !important;
   }
-  .layer-1.animated {
+  .stacked-layer.animated {
     animation-delay:unset !important;
     background-image: url(spinner.png);
     animation: none !important;
