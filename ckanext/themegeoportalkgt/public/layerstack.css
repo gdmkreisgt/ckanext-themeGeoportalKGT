@@ -8,13 +8,17 @@
   /* CSS for Layer Stack Button in ressource views*/
   .stacked-layers{
     background-color: var(--darkblueKGT);
+  }
+  .layer-1{
     transform: none !important;
     border: none !important;
     transform-origin:unset !important;
     -webkit-transform-origin: unset !important;
+    background-image: url(layerstack.png);
   }
-  .layer-1{
-    background-image: url(./layerstack.png);
+  .layer-1.animated {
+    animation-delay:unset !important;
+    background-image: url(spinner.png);;
   }
   @keyframes stack-the-layers {
     0%{
