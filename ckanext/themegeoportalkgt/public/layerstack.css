@@ -8,6 +8,10 @@
   /* CSS for Layer Stack Button in ressource views*/
   .stacked-layers{
     background-color: var(--darkblueKGT);
+    transform: none !important;
+    border: none !important;
+    transform-origin:unset !important;
+    -webkit-transform-origin: unset !important;
   }
   .layer-1{
     background-image: url(./layerstack.png);
