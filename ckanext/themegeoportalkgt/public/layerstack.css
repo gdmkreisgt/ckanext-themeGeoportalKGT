@@ -1,4 +1,10 @@
-  
+:root{
+  --darkblueKGT:#06416b;
+  --medblueKGT:#698da6;
+  --lightblueKGT:#e6ecf0 ;
+  --redKGT:#b31e3b;
+  --greenKGT: #0DA262;
+}
   /* CSS for Layer Stack Button in ressource views*/
   .stacked-layers{
     background-color: var(--darkblueKGT);
