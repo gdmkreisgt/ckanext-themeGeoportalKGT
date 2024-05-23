@@ -172,6 +172,23 @@ footer, footer p h6, .site-footer a, .attribution label{
 .context-info .image img, .context-info .image a{
     height: auto !important;
 }
+.btn-remove-url{
+    margin: unset !important;
+    width: 10% !important;
+    padding: unset !important;
+    border-radius: 0px 5px 5px 0px !important;
+    position: relative !important;
+    right: 0 !important;
+    top: 0 !important;
+}
+#field-resource-url{
+    width: 90%;
+    border-radius: 5px 0px 0px 5px;
+}
+/*test3{
+    flex-direction: row;
+    display: flex;
+}*/
 /*#########  Tag gallery on index  #########*/
 .tag-gallery-container{
     margin:0% !important;
