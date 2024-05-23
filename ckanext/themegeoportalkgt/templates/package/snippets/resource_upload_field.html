@@ -100,20 +100,17 @@
           'checked' if is_url else '' }}>
         <div class="select-type">
           {% block link_controls %}
-            <div style="display: flex; flex-direction:row;">
-                {{ form.input(
-                    'url',
-                    label=url_label or _('URL'),
-                    id='field-resource-url',
-                    type='url',
-                    placeholder=placeholder,
-                    value=data.get('url'),
-                    error=errors.get('url'),
-                    classes=['control-full']) }}
-                {{ remove_button(
-                    js="$('#field-resource-url').val('')") }}
-            </div>
-            
+            {{ form.input(
+                'url',
+                label=url_label or _('URL'),
+                id='field-resource-url',
+                type='url',
+                placeholder=placeholder,
+                value=data.get('url'),
+                error=errors.get('url'),
+                classes=['control-full']) }}
+            {{ remove_button(
+                js="$('#field-resource-url').val('')") }}
           {% endblock %}
         </div>
       {% endblock %}

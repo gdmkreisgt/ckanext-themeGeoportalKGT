@@ -172,6 +172,10 @@ footer, footer p h6, .site-footer a, .attribution label{
 .context-info .image img, .context-info .image a{
     height: auto !important;
 }
+.control-full>div{
+    display:flex;
+    flex-direction:row;
+}
 .btn-remove-url{
     margin: unset !important;
     width: 10% !important;
