@@ -7,7 +7,7 @@
     --greenKGT: #0DA262;
 }
 .main{
-    background: var(--lightblueKGT) !important;
+    background: var(--darkblueKGT) !important;
 }
 .pagination li{
     margin-left: 1rem;
