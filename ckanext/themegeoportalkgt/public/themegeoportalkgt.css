@@ -175,6 +175,10 @@ footer, footer p h6, .site-footer a, .attribution label{
 .ressource-edit-flex{
     display:flex;
     flex-direction:row;
+}
+.ressource-edit-flex>.form-group{
+    display:flex;
+    flex-direction:row;
     width: 100%!important;
 }
 .btn-remove-url{
@@ -184,10 +188,14 @@ footer, footer p h6, .site-footer a, .attribution label{
     border-radius: 0px 5px 5px 0px !important;
     position: relative !important;
     right: 0 !important;
-    top: 0 !important;
+    top: 1.5rem !important;
+    height: 2.15rem !important;
+    box-shadow: unset !important;
+}
+.form-label{
+    height: 1rem !important;
 }
 #field-resource-url{
-    width: 90%;
     border-radius: 5px 0px 0px 5px;
 }
 /*test3{
