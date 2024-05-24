@@ -7,7 +7,7 @@
     --greenKGT: #0DA262;
 }
 .main{
-    background: var(--darkblueKGT) !important;
+    background: var(--lightblueKGT) !important;
 }
 .pagination li{
     margin-left: 1rem;
@@ -172,9 +172,10 @@ footer, footer p h6, .site-footer a, .attribution label{
 .context-info .image img, .context-info .image a{
     height: auto !important;
 }
-.control-full>div{
+.ressource-edit-flex{
     display:flex;
     flex-direction:row;
+    width: 100%!important;
 }
 .btn-remove-url{
     margin: unset !important;

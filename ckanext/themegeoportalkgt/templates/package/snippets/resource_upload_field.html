@@ -100,8 +100,8 @@
           'checked' if is_url else '' }}>
         <div class="select-type">
           {% block link_controls %}
-            <p>HIER IST TEST</p>
-            {{ form.input(
+            <div class="ressource-edit-flex">
+              {{ form.input(
                 'url',
                 label=url_label or _('URL'),
                 id='field-resource-url',
@@ -110,8 +110,9 @@
                 value=data.get('url'),
                 error=errors.get('url'),
                 classes=['control-full']) }}
-            {{ remove_button(
-                js="$('#field-resource-url').val('')") }}
+              {{ remove_button(
+                  js="$('#field-resource-url').val('')") }}
+            </div>
           {% endblock %}
         </div>
       {% endblock %}
