@@ -177,8 +177,6 @@ footer, footer p h6, .site-footer a, .attribution label{
     flex-direction:row;
 }
 .ressource-edit-flex>.form-group{
-    display:flex;
-    flex-direction:row;
     width: 100%!important;
 }
 .btn-remove-url{
